@@ -1,5 +1,5 @@
 {
-  "name": "kyoui-backend",
+  "name": "sick-fits-backend",
   "version": "1.0.0",
   "description": "the backend of sick fits",
   "scripts": {
@@ -25,6 +25,9 @@
     "stripe": "^6.12.1"
   },
   "license": "MIT",
+  "repository": {
+    "url": "wesbos.com"
+  },
   "babel": {
     "presets": [
       "env"

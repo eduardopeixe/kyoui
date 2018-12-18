@@ -7,5 +7,3 @@ generate:
 hooks:
   post-deploy:
     - graphql get-schema -p prisma
-    - generate
-    
