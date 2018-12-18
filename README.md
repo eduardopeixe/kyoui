@@ -17,14 +17,14 @@
 13. graphQL mutation to delete item - DONE
 14. page to display single item - DONE
 15. pagination - DONE
+16. Athentication - users signup and permissions - DONE
+17. React user signup - DONE
+18. User session handler - DONE
+19. User sign in - DONE
+20. User Sign out - DONE
+21. Password reset flow - DONE
 
 What are still to come!!!
 
-1. Athentication - users signup and permissions
-2. React user signup
-3. User session handler
-4. User sign in
-5. User Sign out
-6. Password reset flow
-7. Sending email
-8. Permission management
+1. Sending email
+1. Permission management
