@@ -21,6 +21,18 @@ server.express.use((req, res, next) => {
   next();
 });
 
+// create a middleware to populat the tje iser pm eacj request
+server.express.use(async (req, res, next) => {
+  //if not logged in skip it all
+  if (!req.userId) return next();
+  const user = await db.query.user(
+    { where: { id: req.userId } },
+    '{id, permissions, email, name}'
+  );
+  req.user = user;
+  next();
+});
+
 server.start(
   {
     cors: {

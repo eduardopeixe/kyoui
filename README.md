@@ -23,8 +23,8 @@
 19. User sign in - DONE
 20. User Sign out - DONE
 21. Password reset flow - DONE
-
-What are still to come!!!
-
-1. Sending email
-1. Permission management
+22. Sending email - DONE
+23. Permission management - DONE
+24. Update item - DONE
+25. Delete item - DONE
+26. Shopping Cart

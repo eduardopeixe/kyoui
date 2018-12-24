@@ -6,8 +6,8 @@ import Router from 'next/router';
 import formatMoney from '../lib/formatMoney';
 import Error from './ErrorMessage';
 
-const CREATE_ITEM_MUTAION = gql`
-  mutation CREATE_ITEM_MUTAION(
+const CREATE_ITEM_MUTATION = gql`
+  mutation CREATE_ITEM_MUTATION(
     $title: String!
     $description: String!
     $price: Int!
@@ -48,7 +48,7 @@ class CreateItem extends Component {
     const files = e.target.files;
     const data = new FormData();
     data.append('file', files[0]);
-    data.append('upload_preset', 'sickfits');
+    data.append('upload_preset', 'kyoui');
 
     const res = await fetch(
       'https://api.cloudinary.com/v1_1/bse/image/upload',
@@ -65,7 +65,7 @@ class CreateItem extends Component {
 
   render() {
     return (
-      <Mutation mutation={CREATE_ITEM_MUTAION} variables={this.state}>
+      <Mutation mutation={CREATE_ITEM_MUTATION} variables={this.state}>
         {(createItem, { loading, error, called, data }) => (
           // wonderfull of Apollo
           // give us the loading, error, called and data
@@ -86,61 +86,61 @@ class CreateItem extends Component {
             <Error error={error} />
 
             <fieldset disable={loading ? 1 : 0} aria-busy={loading ? 1 : 0}>
-              <label htmlFor='file'>
+              <label htmlFor="file">
                 Image
                 <input
-                  type='file'
-                  id='file'
-                  name='file'
-                  placeholder='file'
+                  type="file"
+                  id="file"
+                  name="file"
+                  placeholder="file"
                   onChange={this.uploadFile}
                   required
                 />
                 {this.state.image && (
                   <img
                     src={this.state.image}
-                    width='200'
-                    alt='Upload Preview'
+                    width="200"
+                    alt="Upload Preview"
                   />
                 )}
               </label>
-              <label htmlFor='title'>
+              <label htmlFor="title">
                 Title
                 <input
-                  type='text'
-                  id='title'
-                  name='title'
-                  placeholder='title'
+                  type="text"
+                  id="title"
+                  name="title"
+                  placeholder="title"
                   value={this.state.title}
                   onChange={this.handleChange}
                   required
                 />
               </label>
-              <label htmlFor='price'>
+              <label htmlFor="price">
                 Price
                 <input
-                  type='number'
-                  id='price'
-                  name='price'
-                  placeholder='price'
+                  type="number"
+                  id="price"
+                  name="price"
+                  placeholder="price"
                   value={this.state.price}
                   onChange={this.handleChange}
                   required
                 />
               </label>
-              <label htmlFor='description'>
+              <label htmlFor="description">
                 Description
                 <textarea
-                  type='number'
-                  id='description'
-                  name='description'
-                  placeholder='Enter a description'
+                  type="number"
+                  id="description"
+                  name="description"
+                  placeholder="Enter a description"
                   value={this.state.description}
                   onChange={this.handleChange}
                   required
                 />
               </label>
-              <button type='submit'>Submit</button>
+              <button type="submit">Submit</button>
             </fieldset>
           </Form>
         )}

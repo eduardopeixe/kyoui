@@ -29,7 +29,7 @@ const Pagination = props => (
         <PaginationStyles>
           <Head>
             <title>
-              Sick Fit {page} of {pages}
+              Kyoui {page} of {pages}
             </title>
           </Head>
           <Link
@@ -39,7 +39,7 @@ const Pagination = props => (
               query: { page: page - 1 }
             }}
           >
-            <a className='prev' aria-disabled={page <= 1}>
+            <a className="prev" aria-disabled={page <= 1}>
               Prev
             </a>
           </Link>
@@ -54,7 +54,7 @@ const Pagination = props => (
               query: { page: page + 1 }
             }}
           >
-            <a className='next' aria-disabled={page >= pages}>
+            <a className="next" aria-disabled={page >= pages}>
               Next
             </a>
           </Link>
