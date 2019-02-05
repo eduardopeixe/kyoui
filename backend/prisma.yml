@@ -1,6 +1,7 @@
-endpoint: ${env:PRISMA_ENDPOINT}
+#endpoint: ${env:PRISMA_ENDPOINT}
+endpoint: https://market-prod-8cd32cb1fe.herokuapp.com/kyoui-prod/prod
 datamodel: datamodel.graphql
-# secret: ${env:PRISMA_SECRET}
+secret: ${env:PRISMA_SECRET}
 generate:
   - generator: graphql-schema
     output: ./src/generated/
